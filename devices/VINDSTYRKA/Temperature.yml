@@ -1,0 +1,14 @@
+type: gauge
+entity: sensor.ikea_of_sweden_vindstyrka_temperature
+unit: °C
+name:
+  type: entity
+needle: true
+severity:
+  green: 10
+  yellow: 30
+  red: 40
+max: 50
+min: 4
+
+

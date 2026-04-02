@@ -1,0 +1,81 @@
+type: custom:apexcharts-card
+header:
+  show: true
+  title: Particulate Matter 2.5 micrometers 
+  show_states: true
+  colorize_states: true
+graph_span: 24h
+span:
+  start: day
+  offset: "-1d"
+series:
+  - entity: sensor.ikea_of_sweden_vindstyrka_pm2_5
+    name: today
+    color: "#1D9E75"
+    curve: smooth
+    type: line
+    stroke_width: 2
+    fill_raw: zero
+    group_by:
+      func: avg
+      duration: 5min
+    show:
+      extremas: true
+      in_header: true
+      legend_value: true
+  - entity: sensor.ikea_of_sweden_vindstyrka_pm2_5
+    name: yesterday
+    color: "#ff6d00"
+    curve: smooth
+    type: line
+    stroke_width: 2
+    fill_raw: zero
+    offset: "-1d"
+    group_by:
+      func: avg
+      duration: 5min
+    show:
+      extremas: true
+      in_header: true
+      legend_value: true
+apex_config:
+  layout: minimal
+  chart:
+    height: 220px
+  xaxis:
+    type: datetime
+  yaxis:
+    min: 0
+    max: 300
+    tickAmount: 5
+  tooltip:
+    x:
+      format: ddd HH:mm
+  annotations:
+    yaxis:
+      - "y": 35
+        borderColor: "#FFFF00"
+        label:
+          text: Slightly Unhealthy
+          style:
+            color: "#FFFF00"
+      - "y": 55
+        borderColor: "#FF0000"
+        label:
+          text: Unhealthy
+          style:
+            color: "#FF0000"
+      - "y": 150
+        borderColor: "#8F3F97"
+        label:
+          text: Very Unhealthy
+          style:
+            color: "#8F3F97"
+      - "y": 250
+        borderColor: "#7E0023"
+        label:
+          text: Hazardous
+          style:
+            color: "#7E0023"
+
+

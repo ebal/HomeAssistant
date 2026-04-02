@@ -1,0 +1,11 @@
+
+type: gauge
+entity: sensor.ikea_of_sweden_vindstyrka_humidity
+max: 100
+needle: true
+severity:
+  green: 45
+  yellow: 0
+  red: 65
+min: 0
+

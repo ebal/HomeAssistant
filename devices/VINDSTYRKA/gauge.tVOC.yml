@@ -1,0 +1,19 @@
+type: gauge
+entity: sensor.ikea_of_sweden_vindstyrka_voc_index
+needle: true
+segments:
+  - from: 0
+    color: "#6ee7b7"
+  - from: 51
+    color: "#fde68a"
+  - from: 101
+    color: "#fdba74"
+  - from: 151
+    color: "#f87171"
+  - from: 201
+    color: "#c084fc"
+  - from: 301
+    color: purple
+min: 0
+max: 500
+

@@ -1,0 +1,21 @@
+type: gauge
+entity: sensor.ikea_of_sweden_vindstyrka_pm2_5
+needle: true
+segments:
+  - from: 0
+    color: "#87589c"
+  - from: 15
+    color: "#01ace2"
+  - from: 35
+    color: "#9bc674"
+  - from: 55
+    color: "#fbeb36"
+  - from: 150
+    color: "#f1882d"
+  - from: 250
+    color: "#e51f1f"
+min: 0
+max: 300
+grid_options:
+  columns: 12
+  rows: 6
